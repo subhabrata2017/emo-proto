@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-title>
+          {{ user.name }}'s Home
+          <ion-icon name="log-out-outline" class="logout-button" (click)="logout()"></ion-icon>
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+  <ion-card>
+      <ion-card-content>
+          <ion-item>
+              <span class="p-r-10">Post:</span>{{getUserPost( user.id )}}                
+          </ion-item>
+          <ion-item *ngIf="parentName">
+              <span class="p-r-10">Parent Name:</span>{{ parentName }}
+          </ion-item>
+          <ion-button expand="block" (click)="showChildren()"><ion-icon class="p-r-10" name="person-add-outline"></ion-icon>Show Child</ion-button>
+      </ion-card-content>
+  </ion-card> 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="addChild()">
+        <ion-icon name="person-add-outline"></ion-icon>
+      </ion-fab-button>
+  </ion-fab>
+</ion-content>

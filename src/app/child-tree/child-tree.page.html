@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+        <div class="page-title">            
+            <ion-icon name="arrow-back-outline" class="arrow-icon p-l-10" (click)="backToPrevious()"></ion-icon>
+            <ion-title>{{ user.name }}'s Tree</ion-title>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="childUsers.length > 0">
+        <ion-item *ngFor="let child of childUsers">
+            <ion-label>{{child.name}}, {{child.post}}</ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-item *ngIf="childUsers.length == 0">
+        <div class="no-child-message">No Child Available</div>
+    </ion-item>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <div class="page-title">            
+            <ion-icon name="arrow-back-outline" class="arrow-icon p-l-10" (click)="backToPrevious()"></ion-icon>
+            <ion-title>Entry a user</ion-title>
+        </div>        
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-label>User Id: {{ getNewUserId() }}</ion-label>                
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">User Name</ion-label>
+                <ion-input [(ngModel)]="newUserName"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Parent Name: {{ getParentName() }}</ion-label>                
+            </ion-item>
+            <ion-item>
+                <ion-label>Designation: JCO</ion-label>                
+            </ion-item>
+            <ion-item>
+                <ion-button expand="block" (click)="addUser()"><ion-icon name="person-add-outline" class="p-r-10"></ion-icon>Add Entry</ion-button>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

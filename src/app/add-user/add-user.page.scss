@@ -1,0 +1,20 @@
+.page-title {
+    display: flex;
+    align-items: center;
+}
+
+.p-l-10 {
+    padding-left: 10px;
+}
+
+.p-r-10 {
+    padding-right: 10px;
+}
+
+.arrow-icon {
+    color: var( --ion-color-primary );
+}
+
+ion-button {
+    width: 100%;
+}

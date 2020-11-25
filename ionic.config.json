@@ -1,0 +1,8 @@
+{
+  "name": "emoinu-proto",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
